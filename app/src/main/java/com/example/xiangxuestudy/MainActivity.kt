@@ -26,7 +26,8 @@ class MainActivity : AppCompatActivity() {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(object : ApiResponse<LoginResponse>(){
                     override fun success(data: LoginResponse?) {
-                        Toast.makeText(this@MainActivity,"success", Toast.LENGTH_SHORT).show()
+
+                        Toast.makeText(this@MainActivity,"success ${data?.nickname} ${data?.id}", Toast.LENGTH_SHORT).show()
                     }
 
                     override fun failure(errorMsg: String) {
