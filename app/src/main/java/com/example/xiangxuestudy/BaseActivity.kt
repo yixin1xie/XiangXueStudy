@@ -15,11 +15,13 @@ Description:
  */
 abstract class BaseActivity<V : ViewDataBinding> : AppCompatActivity() {
     lateinit var  binding:V
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        Log.d("yixinxin","enter the create")
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, getLayoutId())
         binding.lifecycleOwner = this
+        initBinding()
+        initViewModel()
+        loadData()
     }
     @LayoutRes
     protected abstract fun getLayoutId(): Int
