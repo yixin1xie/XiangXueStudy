@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- 底部椭圆按钮通用样式 如果按钮不需要阴影使用textView控件-->
+    <style name="comm_bottom_btn">
+        <item name="android:layout_height">44dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:background">@drawable/comm_btn_black_default_selector</item>
+        <item name="android:textColor">@drawable/comm_btn_black_text_color_selector</item>
+        <item name="android:stateListAnimator">@null</item><!-- 去掉阴影-->
+    </style>
+</resources>

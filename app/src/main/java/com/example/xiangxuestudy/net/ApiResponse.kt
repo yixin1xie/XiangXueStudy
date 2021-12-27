@@ -1,6 +1,5 @@
-package com.example.xiangxue.net
+package com.example.xiangxuestudy.net
 
-import android.util.Log
 import com.example.xiangxue.entity.LoginResponWrapper
 import io.reactivex.Observer
 import io.reactivex.disposables.Disposable
